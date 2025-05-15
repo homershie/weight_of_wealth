@@ -1,0 +1,18 @@
+:root {
+  --red: #db0007;
+  --yellow: #ffcc00;
+}
+
+.tippy-box[data-theme~="wow-dark"] {
+  background-color: black;
+  color: var(--yellow);
+  padding: 4px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  text-align-last: left;
+}
+
+.tippy-box[data-theme~="wow-dark"] .tippy-arrow {
+  color: var(--red); /* 箭頭顏色 */
+}

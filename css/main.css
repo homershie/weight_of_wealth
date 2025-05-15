@@ -1,0 +1,374 @@
+:root {
+  --red: #db0007;
+  --yellow: #ffcc00;
+}
+
+img,
+input,
+svg {
+  vertical-align: middle;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+body {
+  background-color: var(--red);
+  color: white;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 42px;
+  margin: 10px;
+  user-select: none;
+}
+
+.click-img {
+  position: fixed;
+  width: 36px;
+  pointer-events: none;
+  transition: none;
+  opacity: 1;
+  z-index: 9999;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.panel {
+  background: var(--yellow);
+  padding: 15px;
+  width: 370px;
+  color: black;
+  font-weight: bold;
+}
+
+.buy {
+  height: 520px;
+}
+
+.score-list {
+  margin-bottom: 20px;
+  background: black;
+  color: yellow;
+  padding: 10px;
+}
+
+.score-content > p {
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 34px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.score-content > img {
+  width: 34px;
+  height: auto;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.statistics table {
+  width: 90%;
+  margin: auto;
+}
+
+.statistics td {
+  font-size: 42px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.statistics td:first-child {
+  font-size: 18px;
+  width: 30%;
+  text-align: left;
+  line-height: 18px;
+}
+
+#logo {
+  font-size: 100px;
+  margin: 75px 0;
+  color: var(--yellow);
+  cursor: pointer;
+  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+.game-section {
+  text-align: center;
+  height: 540px;
+  padding: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#calsPS {
+  margin: 0;
+}
+
+#calsNow {
+  margin: 0;
+}
+
+.technology-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.tech-item {
+  filter: grayscale(1);
+  cursor: pointer;
+  outline: 3px solid black;
+}
+
+.tech-item:hover {
+  outline: 3px solid white;
+}
+
+.tech-img > img {
+  width: 54px;
+  height: auto;
+}
+
+.tech-price-container {
+  color: white;
+  background: black;
+  padding: 4px;
+}
+
+.tech-price {
+  display: inline-block;
+  margin: 0;
+}
+
+.store {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.store-item {
+  width: 280px;
+  height: 54px;
+  background-color: black;
+  margin: 20px auto;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.store-item:hover {
+  outline: 3px solid white;
+}
+
+.store-img,
+.store-text {
+  float: left;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.store-img {
+  background: white;
+}
+
+.store-text {
+  color: white;
+  line-height: 27px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.store-img img {
+  width: 54px;
+  height: 54px;
+}
+.store-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.store-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.price-icon {
+  display: inline-block;
+}
+
+.store-price {
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+.store-level {
+  color: var(--yellow);
+  margin: 0;
+  font-size: 48px;
+  text-align: right;
+  float: right;
+  margin-right: 4px;
+  line-height: 72px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.store-item.maxed {
+  position: relative;
+  cursor: not-allowed;
+}
+
+.store-item.maxed::after {
+  content: "MAX";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--red);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 2px 16px;
+  border-radius: 6px;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+
+.start-btn,
+.restart-btn,
+.end-btn {
+  position: absolute;
+  line-height: 36px;
+  height: 36px;
+  width: 36px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.start-btn:hover,
+.restart-btn:hover,
+.end-btn:hover {
+  color: black;
+  background: var(--yellow);
+  outline: invert 5px solid black;
+  transform: scale(1.2);
+}
+
+.end-btn {
+  top: 23.6px;
+  right: 23.6px;
+}
+
+.restart-btn {
+  top: 23.6px;
+  right: 69.6px;
+}
+.start-btn {
+  top: 23.6px;
+  right: 115.6px;
+}
+.autosave-btn {
+  position: absolute;
+  line-height: 36px;
+  height: 36px;
+  width: 36px;
+  top: 23.6px;
+  right: 69.6px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.autosave-btn:hover {
+  color: black;
+  background: var(--yellow);
+  outline: invert 5px solid black;
+  transform: scale(1.2);
+}
+
+.footer {
+  animation: fadeAnimation 2s infinite;
+}
+
+@keyframes fadeAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+
+  .game-section {
+    order: -2;
+    margin-bottom: 50px;
+  }
+
+  .panel {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .statistics {
+    width: auto;
+    margin: auto;
+  }
+
+  .buy {
+    width: auto;
+    margin-top: 20px;
+  }
+}
+.tech-item.disabled {
+  position: relative;
+}
+
+.tech-item.disabled::after {
+  content: "已售完";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

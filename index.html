@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight of Wealth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sweetalert.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/tippy.css" />
+  </head>
+  <body>
+    <div class="end-btn" data-id="結束遊戲">
+      <i class="fa-solid fa-power-off"></i>
+    </div>
+    <div class="restart-btn" data-id="重新開始">
+      <i class="fa-solid fa-reply"></i>
+    </div>
+    <div class="start-btn" data-id="開始遊戲">
+      <i class="fa-solid fa-play"></i>
+    </div>
+
+    <h1>WEIGHT OF WEALTH</h1>
+
+    <div class="container">
+      <div>
+        <div class="score-list">
+          <h2>SCORE LIST</h2>
+          <div class="score-content">
+            <img src="./images/french-fries.png" alt="french-fries" />
+            <p id="cals-fry"></p>
+            <img src="./images/nuggets.png" alt="nuggets" />
+            <p id="cals-nugget"></p>
+            <img src="./images/burger.png" alt="burger" />
+            <p id="cals-burger"></p>
+          </div>
+        </div>
+
+        <div class="panel statistics">
+          <h2>STATISTICS</h2>
+          <table>
+            <tr>
+              <td class="statTitle">CLICKS</td>
+              <td class="statValue" id="clicks">0</td>
+            </tr>
+            <tr>
+              <td class="statTitle">TOTAL<br />CALORIES</td>
+              <td class="statValue" id="cals">0</td>
+            </tr>
+            <tr>
+              <td class="statTitle">highest<br />CALORIES</td>
+              <td class="statValue" id="top-cals">0</td>
+            </tr>
+            <tr>
+              <td class="statTitle">FATTEST<br />PLAYER</td>
+              <td class="statValue" id="top-player">Mr.FAT</td>
+            </tr>
+          </table>
+          <p>
+            Inspired by
+            <a
+              href="https://orteil.dashnet.org/cookieclicker/"
+              target="_blank"
+              style="color: black"
+              >Cookie Clicker</a
+            >.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-section">
+        <div id="timer">00:00</div>
+        <div id="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="238.5"
+            width="272.7"
+            viewBox="0 0 272.70001 238.5"
+            style="transform: rotate(180deg)"
+          >
+            <path
+              fill="#fc0"
+              d="m195.8 17.933c23.3 0 42.2 98.3 42.2 219.7h34c0-130.7-34.3-236.5-76.3-236.5-24 0-45.2 31.7-59.2 81.5-14-49.8-35.2-81.5-59-81.5-42 0-76.2 105.7-76.2 236.4h34c0-121.4 18.7-219.6 42-219.6s42.2 90.8 42.2 202.8h33.8c0-112 19-202.8 42.3-202.8"
+            />
+          </svg>
+        </div>
+        <div id="stats">
+          <p id="cals-ps">0 kcal/s</p>
+          <h2 id="cals-now">0 kcal</h2>
+        </div>
+        <div class="footer">
+          <p>Tap LOGO or space to get more calories.</p>
+        </div>
+      </div>
+
+      <div class="panel buy">
+        <div class="tech"></div>
+        <h2>TECHNOLOGY</h2>
+        <div class="technology-icons">
+          <div class="tech-item" data-id="farm">
+            <div class="tech-img">
+              <img src="./images/farm.png" alt="Icon1" /><br />
+            </div>
+            <div class="tech-price-container">
+              <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+              <p class="tech-price"></p>
+            </div>
+          </div>
+          <div class="tech-item" data-id="chicken-coop">
+            <div class="tech-img">
+              <img src="./images/chicken-coop.png" alt="Icon2" /><br />
+            </div>
+            <div class="tech-price-container">
+              <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+              <p class="tech-price"></p>
+            </div>
+          </div>
+          <div class="tech-item" data-id="recipe">
+            <div class="tech-img">
+              <img src="./images/recipe.png" alt="Icon3" /><br />
+            </div>
+            <div class="tech-price-container">
+              <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+              <p class="tech-price"></p>
+            </div>
+          </div>
+          <div class="tech-item" data-id="gene-therapy">
+            <div class="tech-img">
+              <img src="./images/gene-therapy.png" alt="Icon4" /><br />
+            </div>
+            <div class="tech-price-container">
+              <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+              <p class="tech-price"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="store">
+          <h2>EMPLOYEE</h2>
+          <div class="store-item" data-id="emp_fry">
+            <div class="store-img">
+              <img src="./images/emp_fry.png" alt="emp_fry" />
+            </div>
+            <div class="store-text">
+              <p class="store-title"></p>
+              <div class="store-price-container">
+                <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+                <p class="store-price"></p>
+              </div>
+            </div>
+            <div class="store-level"></div>
+          </div>
+          <div class="store-item" data-id="emp_nugget">
+            <div class="store-img">
+              <img src="./images/emp_nugget.png" alt="emp_nugget" />
+            </div>
+            <div class="store-text">
+              <p class="store-title"></p>
+              <div class="store-price-container">
+                <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+                <p class="store-price"></p>
+              </div>
+            </div>
+            <div class="store-level"></div>
+          </div>
+          <div class="store-item" data-id="emp_burger">
+            <div class="store-img">
+              <img src="./images/emp_burger.png" alt="emp_burger" />
+            </div>
+            <div class="store-text">
+              <p class="store-title"></p>
+              <div class="store-price-container">
+                <i class="fa-sharp fa-solid fa-fire price-icon"></i>
+                <p class="store-price"></p>
+              </div>
+            </div>
+            <div class="store-level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://kit.fontawesome.com/1224e48878.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="./js/number_formatter.js"></script>
+    <script src="./js/score.js"></script>
+    <script src="./js/objects.js"></script>
+    <script src="./js/game_state.js"></script>
+    <script src="./js/btn.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/parabola_anime.js"></script>
+    <script src="./js/logo_events.js"></script>
+    <script src="./js/space_events.js"></script>
+    <script src="./js/tippy.js"></script>
+    <script src="./js/automation.js"></script>
+    <script src="./js/store.js"></script>
+  </body>
+</html>

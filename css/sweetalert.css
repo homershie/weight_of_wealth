@@ -1,0 +1,47 @@
+:root {
+  --red: #db0007;
+  --yellow: #ffcc00;
+}
+
+.w-icon {
+  color: var(--red);
+  background-color: var(--red);
+}
+
+.w-confirm {
+  background-color: var(--yellow);
+  color: #000;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.w-cancel {
+  background-color: #444;
+  color: #eee;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.w-close {
+  color: white;
+  cursor: pointer;
+}
+.w-close:hover {
+  color: var(--yellow);
+}
+
+.w-save {
+  color: white;
+  background-color: var(--red);
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid var(--red);
+}
