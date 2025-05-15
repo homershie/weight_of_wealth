@@ -8,8 +8,8 @@ window.gameState.calsPS = window.gameState.calsPS || 0;
 const logo = document.getElementById("logo");
 
 function handleClickLogo(e, isKeyboard = false) {
-  if (window.gameState.isGameOver || window.gameState.isLocked) return;
-  window.gameState.isLocked = true; // 立即上鎖
+  if (window.gameState.isGameOver) return;
+  window.gameState.isLocked = true;
   // 取得動畫起點
   let startX, startY;
   if (isKeyboard) {

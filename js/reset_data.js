@@ -1,7 +1,5 @@
 // 重新初始化遊戲資料與畫面
 function resetGameData() {
-  window.gameState.isGameOver = false;
-  window.gameState.isLocked = false; // 重新開始時解鎖
   // 保留 topCals, topPlayer
   const topCals = window.gameState.topCals;
   const topPlayer = window.gameState.topPlayer;
@@ -54,11 +52,4 @@ function resetGameData() {
   // 讓 LOGO 可點
   const logo = document.getElementById("logo");
   if (logo) logo.style.pointerEvents = "auto";
-
-  // 恢復科技與商店互動
-  document.querySelectorAll(".tech-item, .store-item").forEach((el) => {
-    el.style.pointerEvents = "auto";
-    el.style.filter = "";
-    el.style.cursor = "";
-  });
 }

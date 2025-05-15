@@ -12,10 +12,6 @@ if (!window.gameState) {
   };
 }
 
-// 新增全域鎖變數
-window.gameState = window.gameState || {};
-window.gameState.isLocked = false;
-
 // 儲存遊戲狀態到 localStorage
 if (localStorage.currentScore) {
   const data = JSON.parse(localStorage.currentScore);

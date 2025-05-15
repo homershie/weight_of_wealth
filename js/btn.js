@@ -21,6 +21,7 @@ if (restartBtn) {
     if (typeof stopAutomation === "function") stopAutomation();
     if (typeof countdown !== "undefined" && countdown) clearInterval(countdown);
     resetGameData();
+    updateStoreStatus();
   });
 }
 
@@ -31,5 +32,6 @@ if (endBtn) {
     if (typeof stopAutomation === "function") stopAutomation();
     if (typeof countdown !== "undefined" && countdown) clearInterval(countdown);
     handleGameOver(false);
+    updateStoreStatus();
   });
 }

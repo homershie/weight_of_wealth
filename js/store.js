@@ -82,6 +82,11 @@ function updateStoreStatus() {
 function updateStoreItemClass(store, el) {
   const calsNow = window.gameState.cals - window.gameState.spend;
   el.classList.remove("disabled", "maxed");
+  if (window.gameState.isGameOver) {
+    el.style.filter = "grayscale(1)";
+    el.style.cursor = "not-allowed";
+    return;
+  }
   if (store.level >= store.maxLevel) {
     el.classList.add("maxed");
     el.style.cursor = "not-allowed";
