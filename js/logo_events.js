@@ -8,7 +8,8 @@ window.gameState.calsPS = window.gameState.calsPS || 0;
 const logo = document.getElementById("logo");
 
 function handleClickLogo(e, isKeyboard = false) {
-  if (window.gameState.isGameOver) return;
+  if (window.gameState.isGameOver || window.gameState.isLocked) return;
+  window.gameState.isLocked = true; // 立即上鎖
   // 取得動畫起點
   let startX, startY;
   if (isKeyboard) {
@@ -93,6 +94,11 @@ function handleClickLogo(e, isKeyboard = false) {
 
   // 更新科技狀態
   updateTechStatus();
+
+  // 若有動畫或延遲，建議在動畫結束後解鎖，否則可直接 setTimeout 解鎖
+  setTimeout(() => {
+    window.gameState.isLocked = false;
+  }, 50);
 }
 
 // 綁定 LOGO 點擊事件

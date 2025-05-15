@@ -44,6 +44,7 @@ elTechItem.forEach((el) => {
 
   // 點擊購買
   el.addEventListener("click", function () {
+    if (window.gameState.isGameOver) return;
     const calsNow = window.gameState.cals - window.gameState.spend;
     if (!tech.owned && calsNow >= tech.price) {
       window.gameState.spend += tech.price;
@@ -99,6 +100,7 @@ elStoreItem.forEach((el) => {
   updateStoreItemClass(store, el);
 
   el.addEventListener("click", function () {
+    if (window.gameState.isGameOver) return;
     const calsNow = window.gameState.cals - window.gameState.spend;
     if (calsNow >= store.price && store.level < store.maxLevel) {
       window.gameState.spend += store.price;
