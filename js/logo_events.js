@@ -73,6 +73,13 @@ function handleClickLogo(e, isKeyboard = false) {
     burgerCal *= 2;
   }
 
+  // angelBuff 修改卡路里獲取處理
+  if (window.gameState.angelBuff && window.gameState.angelBuff.active) {
+    friesCal *= 5;
+    nuggetCal *= 5;
+    burgerCal *= 5;
+  }
+
   window.gameState.cals += friesCal;
   const calsNow = window.gameState.cals - window.gameState.spend;
 

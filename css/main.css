@@ -56,15 +56,11 @@ h2 {
   font-weight: bold;
 }
 
-.buy {
-  height: 520px;
-}
-
 .score-list {
   margin-bottom: 20px;
   background: black;
   color: yellow;
-  padding: 10px;
+  padding: 30px 10px;
 }
 
 .score-content > p {
@@ -79,6 +75,42 @@ h2 {
 }
 .score-content > img {
   width: 34px;
+  height: auto;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.angel-content {
+  background: black;
+  color: white;
+  border-radius: 100px;
+  padding: 10px;
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}
+.angel-text {
+  display: inline-block;
+  width: 300px;
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  vertical-align: middle;
+  margin-right: 10px;
+  text-align: left;
+}
+.angel-text i {
+  color: var(--yellow);
+}
+.angel-text > p {
+  margin: 0;
+}
+.angel-text > h4 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+.angel-content > img {
+  width: 120px;
   height: auto;
   display: inline-block;
   margin: 10px 0;
@@ -103,7 +135,7 @@ h2 {
 
 #logo {
   font-size: 100px;
-  margin: 75px 0;
+  margin: 100px 0;
   color: var(--yellow);
   cursor: pointer;
   filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.5));
@@ -111,7 +143,7 @@ h2 {
 
 .game-section {
   text-align: center;
-  height: 540px;
+  height: 768px;
   padding: 15px;
   user-select: none;
   -webkit-user-drag: none;
@@ -159,7 +191,7 @@ h2 {
 
 .store {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 76px;
 }
 
 .store-item {
@@ -252,6 +284,9 @@ h2 {
   letter-spacing: 2px;
 }
 
+.buy {
+  padding: 30px 10px;
+}
 .restart-btn,
 .end-btn {
   position: absolute;
@@ -346,6 +381,12 @@ h2 {
   .buy {
     width: auto;
     margin-top: 20px;
+  }
+
+  .angel-content {
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
   }
 }
 .tech-item.disabled {

@@ -9,6 +9,10 @@ if (!window.gameState) {
     topCals: 0,
     topPlayer: "Mr.FAT",
     isGameOver: true,
+    angelBuff: {
+      active: false,
+      endTime: 0,
+    },
   };
 }
 
