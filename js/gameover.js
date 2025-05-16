@@ -1,3 +1,4 @@
+let hasGameStarted = false;
 function handleGameOver(isTimeout = false) {
   if (window.gameState.isGameOver) return;
   window.gameState.isGameOver = true;
@@ -64,9 +65,11 @@ function handleGameOver(isTimeout = false) {
           elTopPlayer.textContent = window.gameState.topPlayer;
         if (typeof saveGameState === "function") saveGameState();
         resetGameData();
+        hasGameStarted = false;
       });
     } else {
       resetGameData();
+      hasGameStarted = false;
     }
   });
 }

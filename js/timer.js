@@ -19,6 +19,15 @@ function endGame() {
 
 let countdown = null;
 function startCountdown() {
+  // 先執行一次倒數
+  if (window.gameState.seconds <= 0) {
+    timer.textContent = "00:00";
+    endGame();
+    stopAutomation();
+  }
+  window.gameState.seconds = window.gameState.seconds || 0;
+  showTimer();
+
   if (countdown) clearInterval(countdown);
   countdown = setInterval(() => {
     if (window.gameState.seconds <= 0) {

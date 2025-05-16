@@ -44,23 +44,6 @@ tippy(".store-item", {
   followCursor: true,
 });
 
-tippy(".start-btn", {
-  content(reference) {
-    const id = reference.getAttribute("data-id");
-    return `
-  <div style="display: flex; gap: 10px; align-items: flex-start;">
-      <div><b>${id}</b></div>
-    </div>
-`;
-  },
-  allowHTML: true,
-  theme: "wow-dark",
-  placement: "right",
-  animation: "fade",
-  delay: [100, 0],
-  followCursor: true,
-});
-
 tippy(".restart-btn", {
   content(reference) {
     const id = reference.getAttribute("data-id");
