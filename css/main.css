@@ -80,42 +80,6 @@ h2 {
   margin: 10px 0;
 }
 
-.angel-content {
-  background: black;
-  color: white;
-  border-radius: 100px;
-  padding: 10px;
-  width: 500px;
-  margin: auto;
-  margin-top: 40px;
-}
-.angel-text {
-  display: inline-block;
-  width: 300px;
-  color: white;
-  font-size: 12px;
-  margin: 0;
-  vertical-align: middle;
-  margin-right: 10px;
-  text-align: left;
-}
-.angel-text i {
-  color: var(--yellow);
-}
-.angel-text > p {
-  margin: 0;
-}
-.angel-text > h4 {
-  font-size: 16px;
-  margin: 4px 0;
-}
-.angel-content > img {
-  width: 120px;
-  height: auto;
-  display: inline-block;
-  margin: 10px 0;
-}
-
 .statistics table {
   width: 90%;
   margin: auto;
@@ -191,7 +155,7 @@ h2 {
 
 .store {
   text-align: center;
-  margin-top: 76px;
+  margin-top: 20px;
 }
 
 .store-item {
@@ -317,31 +281,14 @@ h2 {
   top: 23.6px;
   right: 69.6px;
 }
-.start-btn {
-  top: 23.6px;
-  right: 115.6px;
-}
-.autosave-btn {
-  position: absolute;
-  line-height: 36px;
-  height: 36px;
-  width: 36px;
-  top: 23.6px;
-  right: 69.6px;
-  background: black;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.1s ease-out;
-}
 
-.autosave-btn:hover {
-  color: black;
-  background: var(--yellow);
-  outline: invert 5px solid black;
-  transform: scale(1.2);
+.caution {
+  text-align: center;
+  padding: 6px 0;
+  width: 370px;
+  height: 50px;
+  line-height: 50px;
 }
-
 .footer {
   animation: fadeAnimation 2s infinite;
 }
@@ -381,12 +328,6 @@ h2 {
   .buy {
     width: auto;
     margin-top: 20px;
-  }
-
-  .angel-content {
-    width: auto;
-    margin: auto;
-    margin-top: 50px;
   }
 }
 .tech-item.disabled {

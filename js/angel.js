@@ -12,6 +12,53 @@ function spawnAngel() {
   angel.style.top = Math.random() * (window.innerHeight - 180) + 60 + "px";
   document.body.appendChild(angel);
 
+  // 初始化 tippy
+  tippy(angel, {
+    content() {
+      const a = window.angel;
+      if (!a) return "";
+      return `
+        <div style="
+          display: flex;
+          align-items: center;
+          padding: 12px;
+          font-family: 'Press Start 2P', monospace;
+          font-size: 12px;
+          color: white;
+        ">
+          <img src="${a.img}" alt="${a.id}" style="
+            width: 100px;
+            height: auto;
+            margin-right: 16px;
+            display: inline-block;
+          " />
+          <div style="
+            flex: 1;
+            text-align: left;
+          ">
+            <h4 style="
+              font-size: 16px;
+              margin: 0 0 8px 0;
+              color: white;
+            ">
+              ${a.name}
+            </h4>
+            <p style="margin: 0;">
+              <i style="color: var(--yellow);">${a.subtitle}</i><br />
+              <span style="color: white;">${a.description}</span>
+            </p>
+          </div>
+        </div>
+      `;
+    },
+    allowHTML: true,
+    placement: "right",
+    animation: "fade",
+    delay: [100, 0],
+    followCursor: true,
+    theme: "wow-dark",
+  });
+
   angel.addEventListener("click", () => {
     angel.remove();
     triggerAngelBuff();

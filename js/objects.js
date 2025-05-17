@@ -105,6 +105,17 @@ const point = [
   },
 ];
 
+const angel = {
+  id: "angel-buff",
+  name: "熱量天使 (Calories Angel)",
+  subtitle: "「祂從高處降臨，只為讓你變得更胖。」",
+  description: "在限時10 秒內，你的所有熱量獲取將乘以 5 倍！",
+  img: "./images/calories_angel.gif",
+  active: false,
+};
+
+window.angel = angel;
+
 // storeItem 綁定到 DOM 元素
 storeItem.forEach((item) => {
   const el = document.querySelector(`.store-item[data-id="${item.id}"]`);
