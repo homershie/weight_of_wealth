@@ -110,7 +110,7 @@ const angel = {
   name: "熱量天使 (Calories Angel)",
   subtitle: "「祂從高處降臨，只為讓你變得更胖。」",
   description: "在限時10 秒內，你的所有熱量獲取將乘以 5 倍！",
-  img: "./images/calories_angel.gif",
+  img: "./images/calories_angel.png",
   active: false,
 };
 

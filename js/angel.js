@@ -1,16 +1,29 @@
 function spawnAngel() {
   if (document.getElementById("angel-buff")) return; // 避免同時多個
-  const angel = document.createElement("img");
-  angel.src = "./images/calories_angel.gif";
+  const angel = document.createElement("div");
   angel.id = "angel-buff";
   angel.style.position = "fixed";
-  angel.style.width = "150px";
+  angel.style.width = "200px";
+  angel.style.height = "200px";
   angel.style.zIndex = 9999;
   angel.style.cursor = "pointer";
+  angel.style.backgroundImage = "url('./images/calories_angel.png')";
+  angel.style.backgroundPosition = "0 0";
+  angel.style.backgroundSize = "400px 200px";
+
   // 隨機位置
   angel.style.left = Math.random() * (window.innerWidth - 80) + "px";
   angel.style.top = Math.random() * (window.innerHeight - 180) + 60 + "px";
   document.body.appendChild(angel);
+
+  // sprite sheet 動畫
+  let frame = 0;
+  const frameCount = 2;
+  const frameWidth = 199;
+  const animInterval = setInterval(() => {
+    frame = (frame + 1) % frameCount;
+    angel.style.backgroundPosition = `-${frame * frameWidth}px 0`;
+  }, 500);
 
   // 初始化 tippy
   tippy(angel, {
